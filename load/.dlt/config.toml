@@ -1,0 +1,14 @@
+# 1. Speed up the Extraction (GCS to Local/Memory)
+[extract]
+workers = 4          # Number of parallel threads to download files from GCS
+chunk_size = 10000   # Number of rows to process before writing to a temporary file
+
+# 2. Speed up the Loading (Local to BigQuery)
+[load]
+workers = 5          # Number of concurrent BigQuery load jobs (one per file)
+
+# 3. Global Pipeline Settings
+[runtime]
+log_level = "INFO"   # Options: "DEBUG", "INFO", "WARNING", "ERROR"
+log_format = "JSON"  # Makes logs easier to read if using a log viewer
+

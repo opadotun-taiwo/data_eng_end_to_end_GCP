@@ -1,0 +1,7 @@
+# Ignore credential files and Terraform sensitive files
+/key/*.json
+/keys/*.json
+*.tfvars
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/

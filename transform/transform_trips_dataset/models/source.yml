@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: "Raw data source for NYC data for 2024. This source includes the original tables as ingested from the data provider, without any transformations or cleaning applied."
+    database: gothic-sled-453213-i2
+    schema: trips_dataset
+    tables: 
+      - name: yellow_trips
+        description: Yellow trip data
+        columns:
+          - name : vendorid
+            description: | 
+              A code indicating the provider associated with the trip data
+                1. 'Creative mobile technologies'
+                2. 'Verifone'
+                3. 'unknown/others'
+            data type: integer
+            meta:
+              pii: true
+              ownership: data team
+              importance: high
+      - name: green_trips
+        description: Green trip data
