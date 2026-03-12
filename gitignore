@@ -1,0 +1,18 @@
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# dbt artifacts
+target/
+dbt_packages/
+
+# Airflow logs
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db

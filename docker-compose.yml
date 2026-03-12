@@ -1,0 +1,49 @@
+services:
+
+  airflow-dbase:
+    image: postgres:14.17
+    container_name: airflow_dbase
+    environment:
+      POSTGRES_DB: airflow
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+    networks:
+      - my-network
+
+  airflow:
+    build: .
+    image: airflow-dlt:latest
+    container_name: airflow_container
+    ports:
+      - "8080:8080"
+
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-dbase:5432/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__FERNET_KEY: ''
+      AIRFLOW__WEBSERVER__SECRET_KEY: airflowsecret
+
+      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/gcp/access.json
+      DBT_PROFILES_DIR: /opt/dbt/profiles
+
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./load:/opt/airflow/load
+      - ./transform:/opt/dbt
+      - C:/Users/admin/.dbt:/opt/dbt/profiles:ro
+      - C:/Users/admin/Desktop/complete_data_project/trips/keys/access.json:/opt/airflow/gcp/access.json:ro
+
+    depends_on:
+      - airflow-dbase
+
+    networks:
+      - my-network
+
+    command: >
+      bash -c "airflow db migrate && airflow standalone"
+
+networks:
+  my-network:
+    driver: bridge

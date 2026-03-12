@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: linear_regression
+    description: >
+      Feature engineered dataset used for machine learning models
+      predicting taxi trip duration.
+
+    columns:
+
+      - name: trip_id
+        description: Unique identifier for each taxi trip
+        tests:
+          - not_null
+          - unique
+
+      - name: trip_duration_minutes
+        description: Target variable for regression models
+
+      - name: trip_distance
+        description: Distance of trip in miles
+
+      - name: passenger_count
+        description: Number of passengers in the trip
+
+      - name: fare_amount
+        description: Base fare charged for the trip
+
+      - name: total_amount
+        description: Total trip charge including taxes and tips
+
+      - name: tip_amount
+        description: Tip given by passenger
+
+      - name: pickup_hour
+        description: Hour of day when trip started
+
+      - name: pickup_day_of_week
+        description: Day of week of pickup (0=Sunday)
+
+      - name: is_weekend
+        description: Binary flag for weekend trips
+
+      - name: is_rush_hour
+        description: Binary flag for rush hour trips 10AM -3PM and 7PM- 10PM is not rush hour
+
+      - name: avg_speed_mph
+        description: Average speed calculated from distance and duration
+
+      - name: tip_percentage
+        description: Tip divided by fare amount
+
+      - name: pickup_borough
+        description: Borough where trip started
+
+      - name: dropoff_borough
+        description: Borough where trip ended
+
+      - name: borough_pair
+        description: Combination of pickup and dropoff boroughs
+
+      - name: is_airport_trip
+        description: Flag for trips involving an airport
