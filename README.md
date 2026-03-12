@@ -4,9 +4,8 @@ This project encompasses an end-to-end data pipeline utilizing various tools and
 
 ## Architecture Diagram
 
-![Architecture Diagram](link-to-your-architecture-diagram)
+![Architecture Diagram]()
 
-*(Replace the above link with the actual link to your architecture diagram)*
 
 ## Getting Started
 
