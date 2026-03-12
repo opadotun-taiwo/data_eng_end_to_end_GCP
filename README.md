@@ -4,7 +4,7 @@ This project encompasses an end-to-end data pipeline utilizing various tools and
 
 ## Architecture Diagram
 
-![Architecture Diagram]()
+![Architecture Diagram](https://github.com/opadotun-taiwo/data_eng_end_to_end_GCP/blob/main/batch%20elt.png)
 
 
 ## Getting Started
