@@ -18,7 +18,7 @@ dag = DAG(
     dag_id="dlt_trip_pipeline",
     default_args=default_args,
     description="Run DLT pipeline script and transform",
-    schedule_interval=None,
+    schedule_interval='0 0 1 * *',
     start_date=datetime(2024, 1, 1),
     catchup=False
 )

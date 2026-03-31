@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
 
   airflow-dbase:
@@ -33,7 +35,7 @@ services:
       - ./load:/opt/airflow/load
       - ./transform:/opt/dbt
       - C:/Users/admin/.dbt:/opt/dbt/profiles:ro
-      - C:/Users/admin/Desktop/complete_data_project/trips/keys/access.json:/opt/airflow/gcp/access.json:ro
+      - C:/Users/admin/Desktop/complete_data_project/trips/keys:/opt/airflow/gcp:ro
 
     depends_on:
       - airflow-dbase
@@ -43,6 +45,46 @@ services:
 
     command: >
       bash -c "airflow db migrate && airflow standalone"
+
+  superset-db:
+    image: postgres:14.17
+    environment:
+      POSTGRES_DB: superset
+      POSTGRES_USER: superset
+      POSTGRES_PASSWORD: superset
+    networks:
+      - my-network
+
+  superset:
+    image: superset-bigquery:3.1
+    container_name: superset_trips
+    ports:
+      - "8088:8088"
+    environment:
+      SUPERSET_SECRET_KEY: supersecretkey
+      SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://superset:superset@superset-db:5432/superset
+      GOOGLE_APPLICATION_CREDENTIALS: /app/superset/gcp/access.json
+
+    volumes:
+      - C:/Users/admin/Desktop/complete_data_project/trips/keys:/app/superset/gcp:ro
+
+    depends_on:
+      - superset-db
+    networks:
+      - my-network
+
+    command: >
+      bash -c "
+      superset db upgrade &&
+      superset fab create-admin
+        --username admin
+        --firstname Admin
+        --lastname User
+        --email admin@superset.com
+        --password admin || true &&
+      superset init &&
+      superset run -h 0.0.0.0 -p 8088
+      "
 
 networks:
   my-network:
