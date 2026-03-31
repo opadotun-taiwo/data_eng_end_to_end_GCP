@@ -1579,3 +1579,38 @@ SyntaxError: invalid syntax. Perhaps you forgot a comma?
 [2026-03-31T15:53:52.598+0000] {logging_mixin.py:188} INFO - [2026-03-31T15:53:52.597+0000] {dag.py:3047} INFO - Sync 1 DAGs
 [2026-03-31T15:53:52.634+0000] {logging_mixin.py:188} INFO - [2026-03-31T15:53:52.634+0000] {dag.py:3834} INFO - Setting next_dagrun for dlt_trip_pipeline to 2026-02-01 00:00:00+00:00, run_after=2026-03-01 00:00:00+00:00
 [2026-03-31T15:53:52.669+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/loadtransform.py took 0.163 seconds
+[2026-03-31T16:04:03.984+0000] {processor.py:161} INFO - Started process (PID=1492) to work on /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:04:03.988+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/loadtransform.py for tasks to queue
+[2026-03-31T16:04:03.990+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:04:03.989+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:04:04.026+0000] {processor.py:840} INFO - DAG(s) 'dlt_trip_pipeline' retrieved from /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:04:04.126+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:04:04.119+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2026-03-31T16:04:04.199+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:04:04.199+0000] {dag.py:3834} INFO - Setting next_dagrun for dlt_trip_pipeline to 2026-02-01 00:00:00+00:00, run_after=2026-03-01 00:00:00+00:00
+[2026-03-31T16:04:04.259+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/loadtransform.py took 0.280 seconds
+[2026-03-31T16:04:34.625+0000] {processor.py:161} INFO - Started process (PID=1497) to work on /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:04:34.628+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/loadtransform.py for tasks to queue
+[2026-03-31T16:04:34.630+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:04:34.629+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:04:34.688+0000] {processor.py:840} INFO - DAG(s) 'dlt_trip_pipeline' retrieved from /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:04:34.734+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:04:34.733+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2026-03-31T16:04:34.764+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:04:34.764+0000] {dag.py:3834} INFO - Setting next_dagrun for dlt_trip_pipeline to 2026-02-01 00:00:00+00:00, run_after=2026-03-01 00:00:00+00:00
+[2026-03-31T16:04:34.794+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/loadtransform.py took 0.177 seconds
+[2026-03-31T16:05:05.278+0000] {processor.py:161} INFO - Started process (PID=1502) to work on /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:05:05.280+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/loadtransform.py for tasks to queue
+[2026-03-31T16:05:05.282+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:05:05.281+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:05:05.314+0000] {processor.py:840} INFO - DAG(s) 'dlt_trip_pipeline' retrieved from /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:05:05.345+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:05:05.345+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2026-03-31T16:05:05.388+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:05:05.388+0000] {dag.py:3834} INFO - Setting next_dagrun for dlt_trip_pipeline to 2026-02-01 00:00:00+00:00, run_after=2026-03-01 00:00:00+00:00
+[2026-03-31T16:05:05.421+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/loadtransform.py took 0.146 seconds
+[2026-03-31T16:05:35.662+0000] {processor.py:161} INFO - Started process (PID=1507) to work on /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:05:35.664+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/loadtransform.py for tasks to queue
+[2026-03-31T16:05:35.665+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:05:35.665+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:05:35.697+0000] {processor.py:840} INFO - DAG(s) 'dlt_trip_pipeline' retrieved from /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:05:35.733+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:05:35.732+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2026-03-31T16:05:35.765+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:05:35.765+0000] {dag.py:3834} INFO - Setting next_dagrun for dlt_trip_pipeline to 2026-02-01 00:00:00+00:00, run_after=2026-03-01 00:00:00+00:00
+[2026-03-31T16:05:35.797+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/loadtransform.py took 0.141 seconds
+[2026-03-31T16:06:06.081+0000] {processor.py:161} INFO - Started process (PID=1512) to work on /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:06:06.083+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/loadtransform.py for tasks to queue
+[2026-03-31T16:06:06.084+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:06:06.084+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:06:06.116+0000] {processor.py:840} INFO - DAG(s) 'dlt_trip_pipeline' retrieved from /opt/airflow/dags/loadtransform.py
+[2026-03-31T16:06:06.161+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:06:06.161+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2026-03-31T16:06:06.191+0000] {logging_mixin.py:188} INFO - [2026-03-31T16:06:06.191+0000] {dag.py:3834} INFO - Setting next_dagrun for dlt_trip_pipeline to 2026-02-01 00:00:00+00:00, run_after=2026-03-01 00:00:00+00:00
+[2026-03-31T16:06:06.213+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/loadtransform.py took 0.136 seconds
