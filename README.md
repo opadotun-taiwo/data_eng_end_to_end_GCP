@@ -18,7 +18,7 @@ To set up your environment and get started with this project, follow the steps b
 - **Google Cloud SDK**: Install the Google Cloud SDK for GCP interactions.
 
 ## Superset visualization
-  ![Visualization Diagram]([https://github.com/opadotun-taiwo/data_eng_end_to_end_GCP/blob/main/visualization.png])
+  ![Visualization Diagram](https://github.com/opadotun-taiwo/data_eng_end_to_end_GCP/blob/main/visualization.png)
 
 ### Steps to Run the Project
 1. **Clone the Repository**:
