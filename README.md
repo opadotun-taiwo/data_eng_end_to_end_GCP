@@ -1,6 +1,6 @@
-# Comprehensive Overview of the Project
+# Comprehensive Overview of the NYC Taxi 2024 Data set monthly data schedule
 
-This project encompasses an end-to-end data pipeline utilizing various tools and technologies such as Docker, Terraform, Airflow, Python, DLT, and Google Cloud Platform (GCP). The aim is to provide a robust and scalable architecture that efficiently manages data through its lifecycle.
+This project encompasses an end-to-end monthly batch data pipeline utilizing various tools and technologies such as Docker, Terraform, Airflow, Python, DLT, and Google Cloud Platform (Bigquery). The aim is to provide a robust and scalable architecture that efficiently manages data through its lifecycle for the 2024 NYC taxi dataset.
 
 ## Architecture Diagram
 
